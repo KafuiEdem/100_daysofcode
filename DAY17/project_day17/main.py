@@ -1,3 +1,4 @@
+from cgi import print_directory
 from question_model import Question
 from data import question_data
 from quiz_brain import QuizBrain
@@ -10,7 +11,6 @@ for question in question_data:
     question_bank.append(n)
 
 q = QuizBrain(question_bank)
-# q.question_number-=1
 
 while q.still_has_questions():
     q.next_question()
